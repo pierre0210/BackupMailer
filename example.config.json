@@ -1,0 +1,7 @@
+{
+	"example@example.com": {
+		"files": [
+			{ "name": "example.txt", "path": "/path/to/example.txt" }
+		]
+	}
+}
