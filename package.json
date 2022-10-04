@@ -1,5 +1,5 @@
 {
-  "name": "email-backup",
+  "name": "backup-mailer",
   "version": "1.0.0",
   "description": "",
   "main": "./prod/index.js",
@@ -15,9 +15,11 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "@types/node-schedule": "^2.1.0",
     "@types/nodemailer": "^6.4.6",
     "dotenv": "^16.0.3",
     "googleapis": "^108.0.0",
+    "node-schedule": "^2.1.0",
     "nodemailer": "^6.8.0"
   }
 }
