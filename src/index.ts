@@ -41,7 +41,8 @@ async function backup() {
 
 	Object.entries(config).forEach(async ([addr, email]: [string, any]) => {
 		if(addr == "interval") return;
-		const attachments = [];
+		let text: string = Date() + "\n";
+		let attachments = [];
 		const files = email.files;
 		for(const file of files) {
 			if(fs.existsSync(file.path as string)) {
@@ -49,6 +50,9 @@ async function backup() {
 					filename: file.name as string,
 					content: file.path as string
 				});
+			}
+			else {
+				text += `File ${file.path} not found.`;
 			}
 		}
 		await transporter.sendMail({
